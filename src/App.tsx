@@ -1,8 +1,8 @@
 import { getList } from "./services/pokemon-list-fetch";
-import PokemonListCard from "./components/PokemonListCard";
 import type { PokemonListing } from "./types/pokemon";
 import PokemonList from "./components/PokemonList";
 import { useEffect, useState } from "react";
+import "./App.css"
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
 
     return (
         <div>
-            <h1>Pokédex</h1>
+            <h1 className="title">Kanto Pokedex</h1>
             <PokemonList pokemon={pokemon} />
         </div>
     );

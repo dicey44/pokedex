@@ -1,5 +1,6 @@
 import type { PokemonListing } from "../types/pokemon";
 import PokemonListCard from "./PokemonListCard";
+import "./PokemonList.css"
 
 interface PokemonListProps {
     pokemon: PokemonListing[];
@@ -7,7 +8,7 @@ interface PokemonListProps {
 
 function PokemonList({ pokemon }: PokemonListProps) {
     return (
-        <div>
+        <div className="grid">
             {pokemon.map((poke) => (
                 <PokemonListCard 
                     key={poke.name}

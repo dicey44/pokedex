@@ -6,12 +6,14 @@ interface Listing {
 }
 
 function PokemonListCard( {pokemon} : Listing ) {
+    const pokemonName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+
     return (
-        <div>
+        <div className="list-card">
             <img src={pokemon.image_url}></img>
-            <p>{pokemon.name}</p>
+            <p>{pokemonName}</p>
         </div>
     )
 }
-
+ 
 export default PokemonListCard;

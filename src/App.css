@@ -1,0 +1,10 @@
+body {
+    background-color: beige;
+    font-family: "Press Start 2P", monospace;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 3rem 0 3rem 0;
+}
