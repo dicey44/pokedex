@@ -8,4 +8,5 @@ export interface Pokemon {
 
 export interface PokemonList {
     name: string;
+    image_url: string;
 }[]
