@@ -16,3 +16,21 @@
     
     font-size: 2rem;
 }
+
+@media only screen and (max-width: 900px) {
+    .list-card img {
+        width: 100px;
+    }
+    .list-card p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .list-card img {
+        width: 60px;
+    }
+    .list-card p {
+        font-size: .7rem;
+    }
+}
