@@ -6,7 +6,7 @@ export interface Pokemon {
     stats: {name: string, base_stat: number}[];
 }
 
-export interface PokemonList {
+export interface PokemonListing {
     name: string;
     image_url: string;
-}[]
+}
