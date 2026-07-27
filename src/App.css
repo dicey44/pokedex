@@ -9,6 +9,32 @@ body {
     margin: 3rem 0 3rem 0;
 }
 
+.search-bar {
+    width: 60%;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    padding: .3rem .6rem;
+    
+    margin: 0 auto 1rem auto;
+    display: block;
+} 
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+    
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
 @media only screen and (max-width: 500px) {
     .title {
         font-size: 2rem;
