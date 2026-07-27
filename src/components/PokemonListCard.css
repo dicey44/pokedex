@@ -17,6 +17,10 @@
     font-size: 2rem;
 }
 
+.list-card a {
+    all: unset;
+}
+
 @media only screen and (max-width: 900px) {
     .list-card img {
         width: 100px;

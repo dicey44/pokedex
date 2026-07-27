@@ -10,8 +10,10 @@ function PokemonListCard( {pokemon} : Listing ) {
 
     return (
         <div className="list-card">
+        <a>
             <img src={pokemon.image_url}></img>
             <p>{pokemonName}</p>
+        </a>
         </div>
     )
 }
