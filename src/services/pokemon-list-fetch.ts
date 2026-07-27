@@ -36,23 +36,23 @@ export async function getPokemonDetails(pokemonURL: string): Promise<PokemonDeta
         throw new Error(data.message ?? "Failed to fetch pokemon information");
     }
 
-    const result = data.map((item: any) => {
-        return {
-            name: item.name,
-            id: item.id,
-            image_url: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item.id}.png`,
-            cry_url: item.cries.latest,
-            types: item.types.map((obj: any) => obj.type.name),
+    const result = 
+        {
+            name: data.name,
+            id: data.id,
+            image_url: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`,
+            cry_url: data.cries.latest,
+            types: data.types.map((obj: any) => obj.type.name),
             stats: {
-                hp: item.stats[0].base_stat,
-                attack: item.stats[1].base_stat,
-                defense: item.stats[2].base_stat,
-                specialAttack: item.stats[3].base_stat,
-                specialDefense: item.stats[4].base_stat,
-                speed: item.stats[5].base_stat
+                hp: data.stats[0].base_stat,
+                attack: data.stats[1].base_stat,
+                defense: data.stats[2].base_stat,
+                specialAttack: data.stats[3].base_stat,
+                specialDefense: data.stats[4].base_stat,
+                speed: data.stats[5].base_stat
             }
         }
-    });
+    ;
 
     return result;
     

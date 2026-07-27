@@ -1,4 +1,4 @@
-import { getList } from "./services/pokemon-list-fetch";
+import { getList, getPokemonDetails } from "./services/pokemon-list-fetch";
 import type { PokemonListing } from "./types/pokemon";
 import PokemonList from "./components/PokemonList";
 import { useEffect, useState} from "react";
@@ -34,8 +34,8 @@ function App() {
     }
 
     const filteredPokemon = pokemon.filter(poke => poke.name.toLowerCase().includes(query.toLowerCase()));
-
     
+
     return (
         <div>
             <h1 className="title">Kanto Pokedex</h1>
