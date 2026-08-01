@@ -1,4 +1,4 @@
-import { getList, getPokemonDetails } from "./services/pokemon-list-fetch";
+import { getList } from "./services/pokemon-list-fetch";
 import type { PokemonListing } from "./types/pokemon";
 import PokemonList from "./components/PokemonList";
 import { useEffect, useState} from "react";
@@ -29,6 +29,8 @@ function App() {
         
     }, []);
 
+    
+
     function handleSearchBar(e: React.ChangeEvent<HTMLInputElement>) {
         setQuery(e.target.value);
     }
@@ -42,7 +44,9 @@ function App() {
             <input type="text" placeholder="Search Pokemon" className="search-bar" maxLength={25} value={query} onChange={handleSearchBar}></input>
             <h2 className={isLoading ? "show center" : "hide"}>Loading Pokemon...</h2>
             {error && <h2 className="center">{error}</h2>}
-            <PokemonList pokemon={filteredPokemon} />
+            <PokemonList pokemon={filteredPokemon} onClick={
+                (url) => console.log(url)
+            }/>
             <h2 className={filteredPokemon.length === 0 && !isLoading ? "show center" : "hide"}>Pokemon not found</h2>
         </div>
     );

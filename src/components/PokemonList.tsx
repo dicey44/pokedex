@@ -4,15 +4,17 @@ import "./PokemonList.css"
 
 interface PokemonListProps {
     pokemon: PokemonListing[];
+    onClick: (url: string) => void;
 }
 
-function PokemonList({ pokemon }: PokemonListProps) {
+function PokemonList({ pokemon, onClick }: PokemonListProps) {
     return (
         <div className="grid">
             {pokemon.map((poke) => (
                 <PokemonListCard 
                     key={poke.name}
                     pokemon={poke}
+                    onClick={onClick}
                 />
             ))}
         </div>

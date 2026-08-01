@@ -1,10 +1,3 @@
-export interface Pokemon {
-    name: string;
-    image_url: string;
-    cry_url: string; 
-    types: {type: string}[];
-    stats: {name: string, base_stat: number}[];
-}
 
 export interface PokemonListing {
     name: string;
@@ -18,5 +11,12 @@ export interface PokemonDetailed {
     image_url: string;
     cry_url: string;
     types: [];
-    stats: {};
+    stats: {
+        hp: number;
+        attack: number;
+        defense: number;
+        specialAttack: number;
+        specialDefense: number;
+        speed: number;
+    };
 }
