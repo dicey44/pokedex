@@ -10,11 +10,11 @@ function PokemonListCard( {pokemon, onClick} : Listing ) {
     const pokemonName = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
     return (
-        <div className="list-card">
-        <a onClick={() => onClick(pokemon.url)}>
+        <div className="list-card" onClick={() => onClick(pokemon.url)}>
+        
             <img src={pokemon.image_url}></img>
             <p>{pokemonName}</p>
-        </a>
+        
         </div>
     )
 }
