@@ -6,6 +6,7 @@
     width: 60%;
     border: 5px solid rgb(116, 0, 0);
     background-color: whitesmoke;
+    z-index: 101;
 }
 
 .pokemon-details-container {
@@ -62,4 +63,11 @@
     position: relative;
     top: 1.5px;
     left: 1.5px;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
 }
